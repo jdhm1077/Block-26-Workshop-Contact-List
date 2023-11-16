@@ -5,12 +5,21 @@ import './App.css'
 
 
 const App = () => {
+  const [selectedContactId, setSelectedContactId] = useState(null);
+
   
   return (
     <>
-      <ContactList />
+      {selectedContactId ? (
+        <SelectedContact
+          selectedContactId={selectedContactId}
+          setSelectedContactId={setSelectedContactId}
+        />
+      ) : (
+        <ContactList setSelectedContactId={setSelectedContactId} />
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

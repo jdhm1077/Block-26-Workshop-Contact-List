@@ -1,7 +1,7 @@
 import ContactList from "./ContactList"
 import React from 'react';
 
-const ContactRow = ({ contact }) => {
+const ContactRow = ({ contact, setSelectedContactId }) => {
 
     return (
         <tr>

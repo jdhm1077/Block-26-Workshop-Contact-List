@@ -19,8 +19,9 @@ const ContactList = () => {
 
     
 
-      const [contacts, setContacts] = useState(dummyContacts);
+      const [contacts, setContacts] = useState([]);
       // console.log("Contacts: ", contacts);
+     
       useEffect(() => {
         async function fetchContacts() {
           try {
@@ -30,7 +31,7 @@ const ContactList = () => {
             const result = await response.json();
             setContacts(result);
           } catch (error) {
-            console.error(error);
+            setError(error);
           }
         }
         fetchContacts();
@@ -40,7 +41,7 @@ const ContactList = () => {
     <table>
         <thead>
           <tr>
-            <th colSpan="3">Conttact List</th>
+            <th colSpan="3">Contact List</th>
          </tr>
         </thead>
     
