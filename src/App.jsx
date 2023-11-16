@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import ContactList from './components/ContactList'
-import ContactRow from './components/ContactRow'
-import './App.css'
+import { useState } from 'react';
+import ContactList from './components/ContactList';
+import SelectedContact from "./components/SelectedContact";
+import './App.css';
 
 
 const App = () => {

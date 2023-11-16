@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 
 const SelectedContact = ({ selectedContactId, setSelectedContactId }) => {
   const [contact, setContact] = useState(null);
